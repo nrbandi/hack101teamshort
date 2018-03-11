@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><ramcopyartifactentries>
+  <copyartifactentry>
+    <key>2E229D93-A292-798C-F56B-3BE56F39580E#5.3#/all-themes-1.0.10.jar</key>
+    <assetname>primefaces</assetname>
+    <destination>WebContent/WEB-INF/lib</destination>
+    <connection>http://ram.colruyt.int/ram.ws;CBAF8D7F-F6DB-AA05-D211-A33DA9063867</connection>
+    <preserveArtifactPath>false</preserveArtifactPath>
+  </copyartifactentry>
+  <copyartifactentry>
+    <key>2E229D93-A292-798C-F56B-3BE56F39580E#6.1#///null///null///null///null///null</key>
+    <assetname>primefaces</assetname>
+    <destination>WebContent/WEB-INF/lib</destination>
+    <connection>http://ram.colruyt.int/ram.ws;CBAF8D7F-F6DB-AA05-D211-A33DA9063867</connection>
+    <preserveArtifactPath>false</preserveArtifactPath>
+  </copyartifactentry>
+</ramcopyartifactentries>

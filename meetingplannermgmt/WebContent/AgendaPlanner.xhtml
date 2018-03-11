@@ -1,0 +1,83 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:p="http://primefaces.org/ui">
+
+
+
+	<h:form id="meetingPlannerForm">
+		<!-- 	<h1 style="text-align:center; background-color: blue;">
+			<p:outputLabel value="Ben" />
+		</h1> -->
+		<h:graphicImage library="images" name="logo.png" />
+		<br />
+		<br />
+
+		<h:message for="participantsID" style="color:red;padding-left:25%;" />
+		<br />
+		<h:messages globalOnly="true" style="color:red;padding-left:25%;" />
+		<br />
+		<h:panelGrid columns="2" style="text-align:center;padding-left:25%;">
+			<p:outputLabel value="Title : " />
+			<p:inputText value="#{meetingPlannerBean.meetingTitle}" />
+
+			<p:outputLabel value="Requestor" />
+			<p:outputLabel value="#{meetingPlannerBean.requestor}" />
+
+			<p:outputLabel value="Date From"></p:outputLabel>
+			<h:panelGrid columns="2">
+				<p:inputText value="#{meetingPlannerBean.dateFrom}"
+					style="width:80px;">
+					<!-- <f:convertDateTime pattern="dd/MM/YYYY" /> placeholder="dd/MM/YYYY" -->
+				</p:inputText>
+				<p:inputText value="#{meetingPlannerBean.dateFromTime}"
+					style="width:40px;">
+					<!-- <f:convertDateTime pattern="HH:MM" /> placeholder="HH:MM"-->
+				</p:inputText>
+			</h:panelGrid>
+
+
+			<p:outputLabel value="Date To"></p:outputLabel>
+			<h:panelGrid columns="2">
+				<p:inputText value="#{meetingPlannerBean.dateTo}"
+					style="width:80px;">
+					<!-- <f:convertDateTime pattern="dd/MM/YYYY" /> placeholder="dd/MM/YYYY"-->
+				</p:inputText>
+				<p:inputText value="#{meetingPlannerBean.dateToTime}"
+					style="width:40px;">
+					<!-- <f:convertDateTime pattern="HH:MM" />   placeholder="HH:MM"-->
+				</p:inputText>
+			</h:panelGrid>
+
+			<p:outputLabel value="Confidentiality :" />
+			<h:selectOneMenu>
+				<f:selectItem itemLabel="Not Confindential" itemValue="N" />
+				<f:selectItem itemValue="Y" itemLabel="Confindential" />
+			</h:selectOneMenu>
+		</h:panelGrid>
+		<h:panelGrid style="text-align:center;padding-left:25%;" columns="2">
+			<p:outputLabel value="Participants" />
+			<p:selectManyCheckbox id="participantsID"
+				value="#{meetingPlannerBean.selectedParticipants}">
+				<f:selectItems value="#{meetingPlannerBean.participants}" var="req"
+					itemLabel="#{req.name}" itemValue="#{req.empId}" />
+			</p:selectManyCheckbox>
+
+		</h:panelGrid>
+		<br />
+
+		<h:panelGrid style="text-align:center;padding-left:50%" columns="2">
+			<p:commandButton value="Save"
+				action="#{meetingPlannerBean.saveMeeting}" ajax="false"></p:commandButton>
+			<h:commandButton value="Cancel" action="#{meetingPlannerBean.cancel}"></h:commandButton>
+		</h:panelGrid>
+
+
+
+
+	</h:form>
+
+</ui:composition>

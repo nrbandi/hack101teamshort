@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application id="Application_ID" version="6" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/application_6.xsd">
+ <display-name>meetingplanEAR</display-name>
+ <module id="Module_1520649311187">
+ 	<web>
+ 		<web-uri>meetingplannermgmt.war</web-uri>
+ 		<context-root>meetingplannermgmt</context-root>
+ 	</web>
+ </module>
+ <module id="Module_1520649406453">
+ 	<ejb>meetingplannerejb.jar</ejb>
+ </module> 
+ </application> 
